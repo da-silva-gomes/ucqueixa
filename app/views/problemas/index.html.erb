@@ -8,7 +8,11 @@
     <div class="menu_burguer" onclick="myFunction(this)">
       <div class="line one"></div>
       <div class="line two"></div>
-      <div class="line three"></div>
+     <% if user_signed_in? %>
+        <div class="line tres"></div>
+    <% else %>
+        <div class="line three"></div>
+        <% end %>
     </div>
     <div class="open_menu">
         <a><%= link_to 'uc de queixas', root_path %></a>
