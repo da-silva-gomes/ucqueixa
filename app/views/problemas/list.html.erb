@@ -1,0 +1,49 @@
+<div class="index_container">
+    <p id="notice"><%= notice %></p>
+    <div class="page_title" style="text-transform:Uppercase;">
+        <%= image_tag("listaproblemas.svg", :alt => "") %>
+     </div>
+  <div class="menu menu_homepage">
+      <div class="menu_burguer" onclick="myFunction(this)">
+        <div class="line one"></div>
+        <div class="line two"></div>
+        <div class="line three"></div>
+      </div>
+      <div class="open_menu">
+          <a><%= link_to 'uc de queixas', root_path %></a>
+          <a><%= link_to 'lista de problemas', 'listaproblemas' %></a>
+          <a><%= link_to 'mapa', root_path %></a>
+          <a><%= link_to 'estatísticas', root_path %></a>
+          <a><%= link_to 'intervenções', root_path %></a>
+          <a><%= link_to 'sobre', root_path %></a>
+          <% if user_signed_in? %>
+            <%= link_to('sair', destroy_user_session_path, method: :delete) %>
+          <% else %>
+            <a><%= link_to 'entrar', new_user_session_path %></a>
+            <a><%= link_to 'registrar', new_user_registration_path %></a>
+          <% end %>
+      </div>
+    </div>
+    <div class="add">
+        <a><%= link_to 'add more', new_problema_path %></a>
+    </div>
+     <div class="problemswrap">
+        <% @problemas.each do |problema| %>
+            <%= link_to problema do %>
+                <% if problema.id % 2 == 0 %>
+                    <div class="sm_wrap invert">
+                        <span>No.00<%= problema.id %></span>
+                        <div class="fill">
+                        </div>
+                    </div>
+                <% else %>
+                    <div class="sm_wrap">
+                        <span>No.00<%= problema.id %></span>
+                        <div class="fill">
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        <% end %>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @problema.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @problema.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @problema.location %>
+</p>
+
+<%= link_to 'Edit', edit_problema_path(@problema) %> |
+<%= link_to 'Back', listaproblemas_path %>
+<span><%= link_to 'Destroy', @problema, method: :delete, data: { confirm: 'Are you sure?' } %></span>
