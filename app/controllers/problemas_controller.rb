@@ -32,7 +32,7 @@ class ProblemasController < ApplicationController
 
     respond_to do |format|
       if @problema.save
-        format.html { redirect_to @problema, notice: 'Problema was successfully created.' }
+        format.html { redirect_to @problema, notice: "Problema was successfully created." }
         format.json { render :show, status: :created, location: @problema }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class ProblemasController < ApplicationController
   def update
     respond_to do |format|
       if @problema.update(problema_params)
-        format.html { redirect_to @problema, notice: 'Problema was successfully updated.' }
+        format.html { redirect_to @problema, notice: "Problema was successfully updated." }
         format.json { render :show, status: :ok, location: @problema }
       else
         format.html { render :edit }
@@ -60,19 +60,20 @@ class ProblemasController < ApplicationController
   def destroy
     @problema.destroy
     respond_to do |format|
-      format.html { redirect_to problemas_url, notice: 'Problema was successfully destroyed.' }
+      format.html { redirect_to problemas_url, notice: "Problema was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_problema
-      @problema = Problema.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def problema_params
-      params.require(:problema).permit(:title, :description, :location)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_problema
+    @problema = Problema.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def problema_params
+    params.require(:problema).permit(:title, :description, :location)
+  end
 end
