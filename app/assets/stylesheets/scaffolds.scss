@@ -194,6 +194,12 @@ input:-webkit-autofill:focus {
   display: flex;
   align-items: flex-end;
 
+  .sign_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .shared {
     p {
       margin-top: 2rem;
@@ -215,6 +221,10 @@ input:-webkit-autofill:focus {
   .field {
     margin-bottom: 2rem;
 
+    &.bio {
+      margin: 0;
+    }
+
     label {
       font-size: 2.4rem;
       color: #fafafa;
@@ -229,7 +239,8 @@ input:-webkit-autofill:focus {
       }
     }
 
-    input {
+    input,
+    textarea {
       padding: 0.5rem;
       background-color: #fafafa;
       color: #2b2b2b;
@@ -238,6 +249,10 @@ input:-webkit-autofill:focus {
       font-family: "Poppins", sans-serif;
       font-weight: 600;
       background-color: #fafafa;
+    }
+
+    textarea {
+      height: 17rem;
     }
   }
 
@@ -268,4 +283,19 @@ input:-webkit-autofill:focus {
       }
     }
   }
+}
+
+.bloco1 {
+  grid-area: 3 / 2 / span 6 / span 2;
+  background-color: #fd7248;
+}
+
+.bloco2 {
+  grid-area: 2 / 9 / span 7 / span 2;
+  background-color: #fd7248;
+}
+
+.bloco3 {
+  grid-area: 7 / 4 / span 2 / span 5;
+  background-color: #fd7248;
 }
