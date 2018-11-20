@@ -33,20 +33,26 @@
   <div class="space_one">
   </div>
   <div class="st_shown problem">
-    <span>No.00<%= @problemas[1].id %></span>
-    <p><%= @problemas[1].title %></p>
+    <%= link_to @problemas[1] do %>
+      <span>No.00<%= @problemas[1].id %></span>
+      <p><%= @problemas[1].title %></p>
+    <% end %>
   </div>
   <div class="space_two">
   </div>
   <div class="nd_shown problem">
-    <span>No.00<%= @problemas[2].id %></span>
-    <p><%= @problemas[2].title %></p>
+    <%= link_to @problemas[2] do %>
+      <span>No.00<%= @problemas[2].id %></span>
+      <p><%= @problemas[2].title %></p>
+    <% end %>
   </div>
   <div class="space_three">
   </div>
   <div class="rd_shown problem">
-    <span>No.00<%= @problemas[0].id %></span>
-    <p><%= @problemas[0].title %></p>
+    <%= link_to @problemas[0] do %>
+      <span>No.00<%= @problemas[0].id %></span>
+      <p><%= @problemas[0].title %></p>
+    <% end %>
   </div>
   <% else %>
   <div class="space_one">
