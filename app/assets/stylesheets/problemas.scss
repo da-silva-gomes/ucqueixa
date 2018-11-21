@@ -274,6 +274,33 @@ body {
     }
 }
 
+.about_info {
+    grid-area: 3 / 2 / span 6 / span 7;
+    display: flex;
+    flex-flow: column;
+
+    p {
+        color: #fafafa;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        font-size: 4rem;
+        line-height: 4.2rem;
+    }
+
+    .fill {
+        margin-top: 2rem;
+        background-color: #FD7248;
+    }
+
+    & .row.show_desc {
+        flex: 0 1 auto;
+    }
+
+    & .row.fill {
+        flex: 1 1 auto;
+    }
+}
+
 .page_title {
     grid-area: 2 / 2 / span 1 / span 7;
 
@@ -506,6 +533,17 @@ body {
 
 .page_foot {
     grid-area: 10 / 9 / span 1 / span 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    img {
+        width: 60%;
+    }
+}
+
+.about_foot {
+    grid-area: 8 / 9 / span 1 / span 2;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
