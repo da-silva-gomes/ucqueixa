@@ -1,0 +1,32 @@
+<div class="index_container">
+    <div class=about_title>
+        <%= image_tag("sobre.svg", :alt => "") %>
+    </div>
+    <div class="menu menu_list">
+      <div class="menu_burguer" onclick="myFunction(this)">
+        <div class="line one"></div>
+        <div class="line two"></div>
+        <div class="line tres"></div>
+      </div>
+      <div class="open_menu">
+          <a><%= link_to 'uc de queixas', root_path %></a>
+          <a><%= link_to 'lista de problemas', 'listaproblemas' %></a>
+          <a><%= link_to 'mapa', root_path %></a>
+          <a><%= link_to 'estatísticas', root_path %></a>
+          <a><%= link_to 'intervenções', root_path %></a>
+          <a><%= link_to 'sobre', about_path %></a>
+          <% if user_signed_in? %>
+            <%= link_to('sair', destroy_user_session_path, method: :delete) %>
+          <% else %>
+            <a><%= link_to 'entrar', new_user_session_path %></a>
+            <a><%= link_to 'registrar', new_user_registration_path %></a>
+          <% end %>
+      </div>
+    </div>
+    <div class="primero_paco"></div>
+    <div class="about_info"></div>
+    <div class="segundo_paco"></div>
+    <div class="tercero_paco"></div>
+    <div class="quatro_paco"></div>
+    <div class="cinco_paco"></div>
+</div>

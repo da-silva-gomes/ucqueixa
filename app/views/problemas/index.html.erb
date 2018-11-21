@@ -20,7 +20,7 @@
         <a><%= link_to 'mapa', root_path %></a>
         <a><%= link_to 'estatísticas', root_path %></a>
         <a><%= link_to 'intervenções', root_path %></a>
-        <a><%= link_to 'sobre', root_path %></a>
+        <a><%= link_to 'sobre', about_path %></a>
         <% if user_signed_in? %>
           <%= link_to('sair', destroy_user_session_path, method: :delete) %>
         <% else %>

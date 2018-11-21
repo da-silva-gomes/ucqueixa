@@ -1,6 +1,19 @@
-<h1>Editing Problema</h1>
+<div class="index_container">
+    <div class="add_title" style="text-transform:Uppercase;">
+        <%= image_tag("edit_problem.svg", :alt => "") %>
+    </div>
+    <div class="first_space"></div>
+    <div class="second_space"></div>
+    <div class="third_space"></div>
+    <div class="problem_form">
+    <div style="width:100%;">
+        <%= render 'form', problema: @problema %>
+        <div class="shared">
+            <%= link_to 'Show', @problema %>
+            <%= link_to 'Back', problema_path(@problema) %>
+        </div>
+    </div>
+    </div>
+    <div class="last_space"></div>
+</div>
 
-<%= render 'form', problema: @problema %>
-
-<%= link_to 'Show', @problema %> |
-<%= link_to 'Back', problemas_path %>

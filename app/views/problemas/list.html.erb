@@ -3,7 +3,7 @@
     <div class="page_title" style="text-transform:Uppercase;">
         <%= image_tag("listaproblemas.svg", :alt => "") %>
     </div>
-  <div class="menu menu_list">
+    <div class="menu menu_list">
       <div class="menu_burguer" onclick="myFunction(this)">
         <div class="line one"></div>
         <div class="line two"></div>
@@ -15,7 +15,7 @@
           <a><%= link_to 'mapa', root_path %></a>
           <a><%= link_to 'estatísticas', root_path %></a>
           <a><%= link_to 'intervenções', root_path %></a>
-          <a><%= link_to 'sobre', root_path %></a>
+          <a><%= link_to 'sobre', about_path %></a>
           <% if user_signed_in? %>
             <%= link_to('sair', destroy_user_session_path, method: :delete) %>
           <% else %>
