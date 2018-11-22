@@ -1,5 +1,5 @@
 ::selection {
-  background-color: #fafafa;
+  background-color: #fd7248;
 }
 
 p,
@@ -12,7 +12,7 @@ td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: #fafafa;
   padding: 10px;
   font-size: 11px;
 }
@@ -40,7 +40,11 @@ div {
 }
 
 #notice {
-  color: green;
+  grid-area: 1 / 2 / span 1 / span 3;
+  color: #fd7248;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
 }
 
 .field_with_errors {
@@ -54,7 +58,7 @@ div {
   border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #fafafa;
 
   h2 {
     text-align: left;
@@ -62,8 +66,8 @@ div {
     padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px -7px 0;
-    background-color: #c00;
-    color: #fff;
+    background-color: #fd7248;
+    color: #fafafa;
   }
 
   ul li {

@@ -303,7 +303,7 @@ body {
         font-family: 'Poppins', sans-serif;
         font-weight: 900;
         font-size: 4rem;
-        line-height: 4.2rem;
+        line-height: 4.6rem;
     }
 
     .fill {
@@ -447,19 +447,12 @@ body {
                 display: flex;
                 flex-direction: column;
             }
-
-            .desc {
-                max-width: 20%;
-            }
     
             &.invert {
                 flex-direction: row-reverse;
     
                 span, h1, p {
                     margin: 0 0 0 2rem;
-                }
-
-                .desc {
                     text-align: right;
                 }
             }
@@ -478,7 +471,11 @@ body {
 
             p {
                 margin-top: 0.5rem;
-                font-size: 1.4rem;
+                font-size: 1.5rem;
+                line-height: 2.1rem;
+                color: #fafafa;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
             }
     
             .fill {
@@ -501,7 +498,7 @@ body {
             font-family: 'Poppins', sans-serif;
             font-weight: 900;
             font-size: 4.5rem;
-            line-height: 4.5rem;
+            line-height: 5rem;
         }
     }
 
