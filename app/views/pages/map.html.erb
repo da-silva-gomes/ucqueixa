@@ -1,0 +1,34 @@
+<div class="inde-container">
+    <div class="map_title">
+        <%= image_tag("sobre.svg", :alt => "") %>
+    </div>
+    <div class="menu menu_homepage">
+      <div class="menu_burguer" onclick="myFunction(this)">
+        <div class="line one"></div>
+        <div class="line two"></div>
+        <div class="line tres"></div>
+      </div>
+      <div class="open_menu">
+          <a><%= link_to 'uc de queixas', root_path %></a>
+          <a><%= link_to 'lista de problemas', 'listaproblemas' %></a>
+          <a><%= link_to 'mapa', map_path %></a>
+          <a><%= link_to 'estatísticas', root_path %></a>
+          <a><%= link_to 'intervenções', root_path %></a>
+          <a><%= link_to 'sobre', about_path %></a>
+          <% if user_signed_in? %>
+            <%= link_to('sair', destroy_user_session_path, method: :delete) %>
+          <% else %>
+            <a><%= link_to 'entrar', new_user_session_path %></a>
+            <a><%= link_to 'registrar', new_user_registration_path %></a>
+          <% end %>
+      </div>
+    </div>
+    <div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZmVuZ2xpIiwiYSI6ImNqbmtmZjMzcTB3dW8zcHRkeWtvdmsycjUifQ.NmkWCryb7-p2T8v-PZz5ig';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/fengli/cjooe36i84bg12sl8uwni61xf'
+});
+</script>
+</div>
