@@ -23,9 +23,13 @@
       </p>
     </div>
     <div class="actions">
+      <% if current_user.id === @problema.author.id %>
       <%= link_to 'Edit', edit_problema_path(@problema) %>
       <%= link_to 'Back', listaproblemas_path %>
       <span><%= link_to 'Delete', @problema, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% else %>
+      <span><%= link_to 'Delete', @problema, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+      <% end %>
     </div>
   </div>
 </div>

@@ -570,7 +570,7 @@ body {
 }
 
 .intervencoes_title {
-    grid-area: 2 / 2 / span 1 / span 8;
+    grid-area: 2 / 2 / span 1 / span 7;
 
     img {
         width: 100%;
@@ -582,7 +582,7 @@ body {
     background-color: #FD7248;
 
     &.first {
-        grid-area: 3 / 2 / span 2 / span 9;
+        grid-area: 3 / 2 / span 2 / span 7;
     }
 
     &.second {
@@ -590,7 +590,7 @@ body {
     }
 
     &.tercero {
-        grid-area: 8 / 5 / span 1 / span 6;
+        grid-area: 8 / 5 / span 1 / span 4;
     }
 
     &.quatro {
@@ -598,6 +598,6 @@ body {
     }
 
     &.fifth {
-        grid-area: 5 / 8 / span 3 / span 3;
+        grid-area: 5 / 8 / span 3 / span 1;
     }
 }
