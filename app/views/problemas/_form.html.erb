@@ -26,6 +26,10 @@
     <%= form.text_field :location %>
   </div>
 
+  <div class="user">
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  </div> 
+
   <div class="actions">
     <%= form.submit %>
   </div>

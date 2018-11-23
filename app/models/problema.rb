@@ -1,3 +1,3 @@
 class Problema < ApplicationRecord
-  belongs_to :User, class_name: "User", foreign_key: "User_id", optional: true
+  belongs_to :user
 end

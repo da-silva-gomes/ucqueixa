@@ -1,5 +1,5 @@
 ::selection {
-  background-color: #fd7248;
+  background-color: #fafafa;
 }
 
 p,
@@ -36,6 +36,9 @@ div {
   &.field,
   &.actions {
     margin-bottom: 10px;
+    .back {
+      color: #FD7248;
+    }
   }
 }
 
@@ -191,6 +194,10 @@ label {
         cursor: pointer;
       }
     }
+
+    .back {
+      color: #FD7248;
+    }
   }
 }
 
@@ -301,6 +308,9 @@ input:-webkit-autofill:focus {
         background-color: #000;
         cursor: pointer;
       }
+    }
+    .back {
+      color: #FD7248;
     }
   }
 }

@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_225356) do
-
+ActiveRecord::Schema.define(version: 2018_11_23_144152) do
   create_table "problemas", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_problemas_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,5 +35,4 @@ ActiveRecord::Schema.define(version: 2018_11_08_225356) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
 end

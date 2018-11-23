@@ -245,6 +245,10 @@ body {
             cursor: pointer;
           }
         }
+
+        .back {
+            color: #FD7248;
+        }
     }
 
     textarea {
@@ -384,6 +388,10 @@ body {
 
     a {
         text-align: right;
+
+        p {
+            line-height: 120%;
+        }
     }
 }
 
@@ -413,6 +421,10 @@ body {
     justify-content: flex-end;
     a {
         text-align: right;
+
+        p {
+            line-height: 120%;
+        }
     }
 }
 

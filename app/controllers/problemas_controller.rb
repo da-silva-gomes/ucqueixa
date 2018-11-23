@@ -74,6 +74,6 @@ class ProblemasController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def problema_params
-    params.require(:problema).permit(:title, :description, :location)
+    params.require(:problema).permit(:title, :description, :location, :user_id)
   end
 end
