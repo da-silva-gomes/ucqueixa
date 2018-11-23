@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def map
   end
+
+  def intervencoes
+  end
 end

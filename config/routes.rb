@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   root "problemas#index"
   get "listaproblemas" => "problemas#list"
   get "about" => "pages#about"
-  get "map" => "pages#map"
+  get "mapa" => "pages#map"
+  get "intervencoes" => "pages#intervencoes"
 end
