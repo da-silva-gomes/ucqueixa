@@ -34,9 +34,9 @@
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiZmVuZ2xpIiwiYSI6ImNqbmtmZjMzcTB3dW8zcHRkeWtvdmsycjUifQ.NmkWCryb7-p2T8v-PZz5ig';
   var map = new mapboxgl.Map({
-    center: [-8.416358, 40.185995],
-    zoom: 17,
-    pitch: 45,
+    center: [-8.415026, 40.185787],
+    zoom: 16.4,
+    pitch: 67,
     container: 'map',
     style: 'mapbox://styles/fengli/cjooe36i84bg12sl8uwni61xf'
   });
@@ -77,5 +77,111 @@
             'fill-extrusion-opacity': .6
         }
     }, labelLayerId);
+
+    map.addLayer({
+        "id": "points",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.415885, 40.185323]
+                    },
+                    "properties": {
+                        "title": "No.001"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.412617, 40.186430]
+                    },
+                    "properties": {
+                        "title": "No.002"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.411491, 40.186359]
+                    },
+                    "properties": {
+                        "title": "No.003"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.416258, 40.186991]
+                    },
+                    "properties": {
+                        "title": "No.004"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.416318, 40.185031]
+                    },
+                    "properties": {
+                        "title": "No.005"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.415618, 40.186197]
+                    },
+                    "properties": {
+                        "title": "No.006"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.416247, 40.186437]
+                    },
+                    "properties": {
+                        "title": "No.007"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.413795, 40.185842]
+                    },
+                    "properties": {
+                        "title": "No.008"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-8.415416, 40.184726]
+                    },
+                    "properties": {
+                        "title": "No.009"
+                    }
+                }]
+            }
+        },
+        "layout": {
+            "text-field": "{title}",
+            "text-size": 24,
+            "text-font": ["Poppins Black"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "bottom",
+            'text-allow-overlap': true
+        },
+        'paint': {
+            "text-color": "#2b2b2b",
+            "text-halo-color": "#fd7248",
+            "text-halo-width": 17
+        }
+    });
 });
 </script>
