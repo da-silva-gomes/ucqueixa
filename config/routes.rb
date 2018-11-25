@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get "about" => "pages#about"
   get "mapa" => "pages#map"
   get "intervencoes" => "pages#intervencoes"
+  get "estatisticas" => "pages#estatisticas"
 end

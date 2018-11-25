@@ -270,11 +270,83 @@ body {
 }
 
 .about_title {
-    grid-area: 2 / 2 / span 1 / span 4;
+    grid-area: 2 / 2 / span 1 / span 3;
 
     img {
         width: 100%;
         height: 100%;
+    }
+}
+
+.estatisticas_title {
+    grid-area: 2 / 2 / span 1 / span 7;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.stat_wrapper {
+    grid-area: 3 / 6 / span 6 / span 3;
+    display: flex;
+    flex-flow: column;
+
+    .blanco {
+        height: 50%;
+        background-color: #FD7248;
+    }
+    & .row.blanco {
+        flex: 0 1 auto;
+        transition: height .7s ease-in-out;
+    }
+
+    & .row.empty {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 2rem;
+        transition: margin .4s linear, margin-bottom .4s linear;
+
+        .stat_number {
+            color: #fafafa;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: 4rem;
+            line-height: 4.6rem;
+        }
+    }
+}
+
+.options_wrapper {
+    grid-area: 3 / 2 / span 6 / span 4;
+    display: flex;
+    flex-flow: column;
+    
+    .fill {
+        height: 70%;
+        background-color: #FD7248;
+    }
+    & .row.fill {
+        flex: 0 1 auto;
+    }
+
+    & .row.options {
+        flex: 1 1 auto;
+        margin-bottom: 2rem;
+
+        p {
+            color: #fafafa;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: 4rem;
+            line-height: 5rem;
+
+            &:hover {
+                cursor: pointer;
+                color: #FD7248;
+            }
+        }
     }
 }
 
