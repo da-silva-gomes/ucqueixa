@@ -31,7 +31,7 @@ function stats(s) {
         var pu = document.querySelector(".blanco");
         pu.style.height = "0%";
         var pu_num = document.querySelector(".stat_number");
-        pu_num.innerHTML = "Neste momento não há problemas relados no Polo I.";
+        pu_num.innerHTML = "Neste momento não há problemas relatados no Polo I.";
         document.querySelector(".empty").style.marginBottom = "0";
     } else if ( s.classList[0] === "solved") {
         var sd = document.querySelector(".blanco");
