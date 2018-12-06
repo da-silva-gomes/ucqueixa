@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 
+
 function indexMenu(x) {
     x.classList.toggle("change");
     var menu = document.querySelector(".open_menu");
