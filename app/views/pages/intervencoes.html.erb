@@ -1,9 +1,9 @@
-<div class="index_container">
+<div class="index_container content">
     <div class="intervencoes_title" style="text-transform:Uppercase;">
         <%= image_tag("intervencoes.svg", alt: "Página Invertenções") %>
     </div>
     <div class="menu menu_homepage">
-    <div class="menu_burguer" onclick="myFunction(this)">
+    <div class="menu_burguer" onclick="indexMenu(this)">
       <div class="line one"></div>
       <div class="line two"></div>
      <% if user_signed_in? %>
@@ -32,7 +32,7 @@
     <div class="block tercero"></div>
     <div class="block quatro"></div>
     <div class="block fifth"></div>
-    <div class="about_foot" style="text-transform:Uppercase;">
+    <div class="about_foot all_footer" style="text-transform:Uppercase;">
         <%= image_tag("ucqueixa.svg", alt: "Logo Uc de Queixas") %>
     </div>
 </div>

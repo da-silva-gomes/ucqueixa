@@ -92,5 +92,14 @@ problema3 = Problema.create! do |p|
   p.user_id = user.id
 end
 puts "Nineth problem created, continuing seeding..."
-puts "Were created 2 users and a set of 3 problems, so the first page could display information."
+
+# create problema 10
+problema3 = Problema.create! do |p|
+  p.title = "Falta de sala de estudos"
+  p.description = "O Departamento de Quimica é frenquentado por um número elevado de alunos, dos quais muitos fazem parte das áreas de investigação e mestrado. Estes sofrem pela falta de salas para estes prosseguirem os seus trabalhos, o que significa no ocupo de salas. Estas salas são retiradas dos vários alunos de licenciatura que procuram um local para conseguir estudar e manter o seu aproveitamento. É necessário mudar isto, é necessário por os nossos estudantes em primeiro lugar e oferecer-lhes as melhores condições."
+  p.user_id = user2.id
+end
+puts "Tenth problem created, continuing seeding..."
+
+puts "Were created 2 users and a set of 10 problems, so the first page could display information and the list could have something to show."
 puts "All setup, seeding finished."

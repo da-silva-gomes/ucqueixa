@@ -1,11 +1,7 @@
-<div class="index_container">
+<div class="index_container content openedMenu">
   <p id="notice"><%= notice %></p>
-
-  <div class="page_title" style="text-transform:Uppercase;">
-    <%= image_tag("ucqueixa.svg", alt: "Logo Uc de Queixas") %>
-  </div>
-  <div class="menu menu_homepage">
-    <div class="menu_burguer" onclick="myFunction(this)">
+  <div class="menu menu_homepage oneOne">
+    <div class="menu_burguer change" onclick="indexMenu(this)">
       <div class="line one"></div>
       <div class="line two"></div>
      <% if user_signed_in? %>
@@ -14,7 +10,7 @@
         <div class="line three"></div>
         <% end %>
     </div>
-    <div class="open_menu">
+    <div class="open_menu magic">
         <a><%= link_to 'uc de queixas', root_path %></a>
         <a><%= link_to 'lista de problemas', 'listaproblemas' %></a>
         <a><%= link_to 'mapa', mapa_path %></a>
@@ -35,7 +31,7 @@
   <div class="st_shown problem">
     <%= link_to @problemas[1] do %>
       <span>No.00<%= @problemas[1].id %></span>
-      <p><%= @problemas[1].title %></p>
+      <p class="truncate"><%= @problemas[1].title %></p>
     <% end %>
   </div>
   <div class="space_two">
@@ -51,8 +47,14 @@
   <div class="rd_shown problem">
     <%= link_to @problemas[0] do %>
       <span>No.00<%= @problemas[0].id %></span>
-      <p><%= @problemas[0].title %></p>
+      <p class="truncate"><%= @problemas[0].title %></p>
     <% end %>
+  </div>
+  <div class="space_four">
+  </div>
+  <div class="space_five">
+  </div>
+  <div class="space_six">
   </div>
   <% else %>
   <div class="space_one">
@@ -70,5 +72,14 @@
   <div class="rd_shown problem">
     <span>No.~~~</span>
   </div>
+  <div class="space_four">
+  </div>
+  <div class="space_five">
+  </div>
+  <div class="space_six">
+  </div>
   <% end %>
+    <div class="index_foot all_footer bigger" style="text-transform:Uppercase;">
+        <%= image_tag("ucqueixa.svg", alt: "Logo Uc de Queixas") %>
+    </div>
 </div>

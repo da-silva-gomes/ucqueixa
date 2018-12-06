@@ -1,10 +1,10 @@
-<div class="list_container">
+<div class="list_container content">
     <p id="notice"><%= notice %></p>
     <div class="page_title" style="text-transform:Uppercase;">
         <%= image_tag("listaproblemas.svg", alt: "Página Lista de Problemas") %>
     </div>
     <div class="menu menu_list">
-      <div class="menu_burguer" onclick="myFunction(this)">
+      <div class="menu_burguer" onclick="listMenu(this)">
         <div class="line one"></div>
         <div class="line two"></div>
         <div class="line tres"></div>
@@ -25,38 +25,26 @@
       </div>
     </div>
     <div class="add">
-        <a><%= link_to 'add more', new_problema_path %></a>
+        <a><%= link_to 'adicionar mais', new_problema_path %></a>
     </div>
      <div class="problemswrap">
-        <div class="fix_scroll">
+     <div class="fix_scroll">
         <% @problemas.each do |problema| %>
             <%= link_to problema do %>
-                <% if problema.id % 2 == 0 %>
-                    <div class="sm_wrap invert">
-                        <div class="info">
-                            <span>No.00<%= problema.id %></span>
-                            <h1><%= problema.title %></h1>
-                        <p class="desc"><%= problema.description %></p>
-                        </div>
-                        <div class="fill">
-                        </div>
-                    </div>
-                <% else %>
                     <div class="sm_wrap">
                         <div class="info">
                             <span class="mr20">No.00<%= problema.id %></span>
                             <h1 class="mr20"><%= problema.title %></h1>
-                            <p class="mr20"><%= problema.description %></p>
+                            <p class="mr20 truncate"><%= problema.description %></p>
                         </div>
                         <div class="fill">
                         </div>
                     </div>
-                <% end %>
             <% end %>
         <% end %>
         </div>
     </div>
-    <div class="page_foot" style="text-transform:Uppercase;">
+    <div class="page_foot all_footer" style="text-transform:Uppercase;">
         <%= image_tag("ucqueixa.svg", alt: "Logo Uc de Queixas") %>
     </div>
 </div>

@@ -1,9 +1,9 @@
-<div class="index_container">
+<div class="index_container content">
     <div class="estatisticas_title">
         <%= image_tag("estatisticas.svg", alt: "Página Sobre") %>
     </div>
     <div class="menu menu_homepage">
-      <div class="menu_burguer" onclick="myFunction(this)">
+      <div class="menu_burguer" onclick="indexMenu(this)">
         <div class="line one"></div>
         <div class="line two"></div>
         <div class="line tres"></div>
@@ -31,12 +31,15 @@
     </div>
     <div class="options_wrapper">
         <div class="row options">
-            <p class="users" onclick="stats(this)">Number of users</p>
-            <p class="nproblems" onclick="stats(this)">Number of problems</p>
-            <p class="polodois" onclick="stats(this)">Problems at Polo II</p>
-            <p class="poloum" onclick="stats(this)">Problems at Polo I</p>
-            <p class="solved" onclick="stats(this)">Problems solved</p>
+            <p class="users" onclick="stats(this)">Número de utilizadores</p>
+            <p class="nproblems" onclick="stats(this)">Número de problemas</p>
+            <p class="polodois" onclick="stats(this)">Problemas no Polo II</p>
+            <p class="poloum" onclick="stats(this)">Problemas no Polo I</p>
+            <p class="solved" onclick="stats(this)">Problemas resolvidos</p>
         </div>
         <div class="row fill"></div>
+    </div>
+    <div class="about_foot all_footer" style="text-transform:Uppercase;">
+        <%= image_tag("ucqueixa.svg", alt: "Logo Uc de Queixas") %>
     </div>
 </div>

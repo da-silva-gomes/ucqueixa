@@ -1,11 +1,32 @@
 //= require jquery
 //= require jquery_ujs
 
-function myFunction(x) {
+function indexMenu(x) {
     x.classList.toggle("change");
     var menu = document.querySelector(".open_menu");
+    var p_container = document.querySelector(".content");
+    var oneOne = document.querySelector(".menu");
     //menu.style.display = menu.style.display === "flex" ? "none" : "flex";
     menu.classList.toggle("magic");
+    p_container.classList.toggle("openedMenu");
+    oneOne.classList.toggle("oneOne");
+
+    var foot = document.querySelector(".all_footer");
+    foot.classList.toggle("bigger");
+}
+
+function listMenu(x) {
+    x.classList.toggle("change");
+    var menu = document.querySelector(".open_menu");
+    var p_container = document.querySelector(".list_container");
+    var oneTwo = document.querySelector(".menu_list");
+    //menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    menu.classList.toggle("magic");
+    p_container.classList.toggle("openedMenu");
+    oneTwo.classList.toggle("oneTwo"); 
+
+    var foot = document.querySelector(".page_foot");
+    foot.classList.toggle("biggerList");
 }
 
 function stats(s) {
