@@ -531,6 +531,7 @@ body {
 .problemswrap {
     grid-area: 4 / 2 / span 7 / span 7;
     overflow-y: auto;
+    overflow-x: hidden;
 
     .fix_scroll {
         width: 100%;
@@ -558,6 +559,8 @@ body {
             &:hover {
                 & > .fill {
                     background-image: url("fundo.png");
+                    background-color: #FD7248;
+                    background-blend-mode: multiply;
                     background-size: cover;
                     background-position: right bottom;
                 }
@@ -567,14 +570,9 @@ body {
                 max-width: 65%;
                 display: flex;
                 flex-direction: column;
-            }
-    
-            &.invert {
-                flex-direction: row-reverse;
-    
-                span, h1, p {
-                    margin: 0 0 0 2rem;
-                    text-align: right;
+
+                h1 {
+                    color: #FD7248;
                 }
             }
 
@@ -601,7 +599,10 @@ body {
     
             .fill {
                 width: 100%;
-                background-color: #FD7248;
+                position: relative;
+                background-image: url("fundo.png");
+                background-size: cover;
+                background-position: right bottom;
             }
         }
     }

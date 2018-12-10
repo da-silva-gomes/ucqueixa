@@ -24,11 +24,11 @@
     </div>
     <div class="actions">
       <% if current_user.id === @problema.user.id %>
-      <%= link_to 'Back', listaproblemas_path, { :class=>"back" } %>
+      <%= link_to 'Voltar', listaproblemas_path, { :class=>"back" } %>
       <%= link_to 'Edit', edit_problema_path(@problema) %>
       <span><%= link_to 'Delete', @problema, method: :delete, data: { confirm: 'Are you sure?' } %></span>
       <% else %>
-      <%= link_to 'Back', listaproblemas_path, { :class=>"back" } %>
+      <%= link_to 'Voltar', listaproblemas_path, { :class=>"back" } %>
       <% end %>
     </div>
   </div>
